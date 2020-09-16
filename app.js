@@ -8,14 +8,14 @@ let nlu;
 if (process.env.NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY
   && process.env.NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY !== '') {
   nlu = new NaturalLanguageUnderstandingV1({
-    version: '2018-04-05',
+    version: '2020-09-14',
     url: process.env.NATURAL_LANGUAGE_UNDERSTANDING_URL || 'https://gateway.watsonplatform.net/natural-language-understanding/api',
     iam_apikey: process.env.NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY || '<iam_apikey>',
     iam_url: process.env.ASSISTANT_IAM_URL || 'https://iam.bluemix.net/identity/token',
   });
 } else {
   nlu = new NaturalLanguageUnderstandingV1({
-    version: '2018-04-05',
+    version: '2020-09-14',
     url: process.env.NATURAL_LANGUAGE_UNDERSTANDING_URL || 'https://gateway.watsonplatform.net/natural-language-understanding/api',
     username: process.env.NATURAL_LANGUAGE_UNDERSTANDING_USERNAME || '<username>',
     password: process.env.NATURAL_LANGUAGE_UNDERSTANDING_PASSWORD || '<password>',

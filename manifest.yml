@@ -1,0 +1,14 @@
+applications:
+- name: nlu-asbx
+  path: .
+  buildpack: sdk-for-nodejs
+  command: npm start
+  instances: 1
+  routes:
+    - route: maratona-cf-fca-alessandro.mybluemix.net
+  random-route: true
+  memory: 128M
+  services:
+  - my-nlu-service
+  env:
+    LOCATION: 'IBM Cloud'
